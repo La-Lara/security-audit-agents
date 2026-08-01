@@ -83,6 +83,12 @@ Use them as the authoritative source regarding:
 - project scope
 - applicability
 
+Also use the selected framework list supplied by the Lead Auditor.
+
+Do not select frameworks independently.
+
+Consult only frameworks assigned by the Lead Auditor.
+
 ---
 
 # Audit Scope

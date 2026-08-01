@@ -98,9 +98,15 @@ The registry provides:
 
 - available frameworks
 - framework purpose
-- applicable scenarios
+- supported audit domains
+- supported project types
 - responsible auditors
 - framework location
+- applicability criteria
+- selection notes
+- dependencies
+- incompatible scenarios
+- priority
 - version information
 - review status
 
@@ -109,13 +115,23 @@ The Lead Auditor must:
 1. Analyze discovery results.
 2. Analyze applicability results.
 3. Consult the framework registry.
-4. Select applicable frameworks.
-5. Assign frameworks to auditors.
+4. Select applicable frameworks exclusively from the registry.
+5. Assign frameworks to auditors according to the registry.
 6. Record selected frameworks in the audit plan.
+7. Record skipped frameworks with evidence-based justification.
+8. Provide the selected framework list to specialized auditors.
 
 Never load all frameworks automatically.
 
 Only use frameworks supported by project evidence.
+
+Never hardcode framework applicability.
+
+Never hardcode framework selection rules.
+
+Framework metadata must not be duplicated outside the registry.
+
+Every framework selection decision must cite the evidence that supports it.
 ---
 
 # Audit Workspace
@@ -348,7 +364,8 @@ Before executing an auditor, provide:
 - discovery artifact;
 - applicability artifact;
 - audit workspace location;
-- selected frameworks;
+- selected frameworks assigned to that auditor;
+- skipped frameworks relevant to that auditor, with justification;
 - audit scope;
 - applicable evidence.
 
@@ -478,23 +495,17 @@ Never mix them.
 
 ---
 
-# LGPD Awareness
+# Compliance Framework Awareness
 
-Determine whether LGPD analysis appears relevant.
+Determine whether compliance framework analysis appears relevant by consulting:
 
-Indicators may include:
-
-- personal data
-- user accounts
-- authentication
-- profile information
-- tracking
-- analytics
-- customer records
+frameworks/_framework-registry.md
 
 Do not perform compliance analysis yourself.
 
-Only determine whether Compliance Auditor should be recommended.
+Do not hardcode compliance framework applicability indicators.
+
+Only determine whether Compliance Auditor should be recommended and which registered compliance frameworks, if any, should be supplied.
 
 ---
 

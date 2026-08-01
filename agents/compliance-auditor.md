@@ -103,17 +103,13 @@ Read:
 
 from the audit workspace.
 
-Also consult:
+Also use the selected framework list supplied by the Lead Auditor.
 
-frameworks/
+Consult only framework references assigned by the Lead Auditor.
 
-when available.
+Do not select frameworks independently.
 
-Examples:
-
-- LGPD audit framework
-- privacy controls mapping
-- technical compliance references
+Do not implement independent framework selection logic.
 
 ---
 

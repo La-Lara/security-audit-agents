@@ -82,6 +82,10 @@ Use them as the authoritative source regarding:
 - project scope
 - applicability
 
+Also use the selected framework list supplied by the Lead Auditor.
+
+Do not select frameworks independently.
+
 ---
 
 # Audit Scope
@@ -106,16 +110,11 @@ Do not evaluate future implementations.
 
 # Framework References
 
-When available, consult local framework references.
+Consult only the framework references assigned by the Lead Auditor.
 
-Examples:
+Do not consult unassigned frameworks.
 
-- OWASP Top 10
-- OWASP ASVS
-- OWASP MASVS
-- CWE
-- CIS Controls
-- NIST CSF
+Do not implement independent framework selection logic.
 
 Frameworks are references.
 

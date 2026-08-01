@@ -79,17 +79,13 @@ Read:
 
 from the audit workspace.
 
-Also consult:
+Also use the selected framework list supplied by the Lead Auditor.
 
-frameworks/
+Consult only framework references assigned by the Lead Auditor.
 
-when applicable.
+Do not select frameworks independently.
 
-Examples:
-
-- OpenTelemetry references
-- observability maturity models
-- telemetry standards
+Do not implement independent framework selection logic.
 
 ---
 
