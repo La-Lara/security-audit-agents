@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T03 - Define Methodologies
+T04 - Define Artifact Templates
 
 Status: PENDING
 
@@ -15,10 +15,10 @@ Status: PENDING
 - `docs/implementation-status.md` created.
 - T01 - Persistent Planning and Initial Status completed.
 - T02 - Define Shared Standards completed.
+- T03 - Define Methodologies completed.
 
 ## Pending Tasks
 
-- T04 - Define Artifact Templates
 - T05 - Refine Registry Metadata
 - T06 - Complete OWASP Top 10 Framework File
 - T07 - Complete OWASP ASVS Framework File
@@ -54,6 +54,11 @@ None.
 - `standards/maturity-model.md`
 - `standards/severity-model.md`
 - `standards/status-model.md`
+- `methodologies/security-methodology.md`
+- `methodologies/monitoring-methodology.md`
+- `methodologies/operations-methodology.md`
+- `methodologies/compliance-methodology.md`
+- `methodologies/observability-methodology.md`
 
 ## Validation Results
 
@@ -67,13 +72,17 @@ None.
   finding, and maturity models.
 - Agent value search confirmed standards use the existing finding statuses,
   severity values, maturity levels, and evidence classifications.
+- T03 methodology files created for security, monitoring, operations,
+  compliance, and observability domains.
+- Methodologies provide process guidance without duplicating agent roles.
+- Methodologies reference canonical standards for status, severity, evidence,
+  finding, and maturity models.
 
 ## Remaining Known Inconsistencies
 
 - Lead Auditor does not yet list `observability` as a supported audit mode.
 - Lead Auditor maturity assessment does not yet include Observability.
 - `session-manifest.md` and `audit-plan.md` are expected artifacts but lack template structure.
-- Methodologies are empty.
 - Templates are empty.
 - Framework files other than the registry are empty.
 - Documentation files are empty.
@@ -84,4 +93,4 @@ None.
 
 ## Next Step
 
-Complete domain methodology files in `methodologies/`.
+Define artifact templates in `templates/`.

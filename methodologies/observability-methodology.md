@@ -1,14 +1,14 @@
-# Monitoring Methodology
+# Observability Methodology
 
-This file defines the audit process for the Monitoring Auditor. It provides
+This file defines the audit process for the Observability Auditor. It provides
 phase-level guidance without duplicating agent responsibilities, domain lists,
 or finding structures.
 
 ## Purpose
 
-Guide the Monitoring Auditor through a repeatable, evidence-based process for
-evaluating monitoring readiness and operational visibility within repository
-scope.
+Guide the Observability Auditor through a repeatable, evidence-based process
+for evaluating observability maturity, diagnostic capability, and telemetry
+readiness within repository scope.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ Use `applicability.md` as the authoritative source for scope boundaries.
 
 ### Phase 1 - Scope Confirmation
 
-Confirm which monitoring domains apply based on `applicability.md`. Mark
+Confirm which observability domains apply based on `applicability.md`. Mark
 non-applicable domains as `NOT_APPLICABLE` with scope justification. Do not
 audit absent components.
 
@@ -33,11 +33,12 @@ audit absent components.
 
 For each applicable domain, collect repository evidence:
 
-- configuration files;
-- deployment manifests;
-- infrastructure definitions;
-- monitoring configurations;
-- operational documents;
+- source code;
+- application configuration;
+- logging configuration;
+- telemetry configuration;
+- instrumentation libraries;
+- deployment definitions;
 - documentation.
 
 If evidence cannot be identified, record `NOT_EVIDENCED` or `NOT_TESTED` and
@@ -52,22 +53,17 @@ references, not evidence sources.
 ### Phase 4 - Finding Generation
 
 For each evidence-supported issue, generate a finding using the canonical
-finding model. Assign identifier, title, description, evidence, risk, severity,
-status, recommendation, and validation suggestions. Use allowed status and
-severity values only.
+finding model. Assign identifier, title, description, evidence, impact,
+severity, status, recommendation, and validation suggestions. Use allowed
+status and severity values only.
 
-### Phase 5 - Readiness Assessment
+### Phase 5 - Maturity Assessment
 
-Assess SOC, NOC, and SNOC readiness based on observable evidence. Do not
-perform security analysis or speculate about external systems.
+Assess maturity per observability domain using the canonical maturity model
+levels: Initial, Basic, Intermediate, Advanced, Optimized. Every rating must
+include repository-backed justification.
 
-### Phase 6 - Maturity Assessment
-
-Assess maturity per monitoring domain using the canonical maturity model levels:
-Initial, Basic, Intermediate, Advanced, Optimized. Every rating must include
-repository-backed justification.
-
-### Phase 7 - Future Improvements
+### Phase 6 - Future Improvements
 
 Document optional improvements not supported by current evidence as findings.
 Keep this section separate from confirmed and potential findings.
@@ -83,14 +79,14 @@ Keep this section separate from confirmed and potential findings.
 
 ## Output
 
-Generate `monitoring.md` inside the audit workspace following the structure
-defined in the Monitoring Auditor agent file.
+Generate `observability.md` inside the audit workspace following the structure
+defined in the Observability Auditor agent file.
 
 ## Boundaries
 
 This methodology does not:
 
-- define monitoring domains (see Monitoring Auditor agent);
+- define observability domains (see Observability Auditor agent);
 - define finding structure (see finding-model.md);
 - define severity criteria (see severity-model.md);
 - define status values (see status-model.md);
