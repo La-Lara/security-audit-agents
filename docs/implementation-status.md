@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T05 - Refine Registry Metadata
+T06 - Complete OWASP Top 10 Framework File
 
 Status: PENDING
 
@@ -17,10 +17,10 @@ Status: PENDING
 - T02 - Define Shared Standards completed.
 - T03 - Define Methodologies completed.
 - T04 - Define Artifact Templates completed.
+- T05 - Refine Registry Metadata completed.
 
 ## Pending Tasks
 
-- T06 - Complete OWASP Top 10 Framework File
 - T07 - Complete OWASP ASVS Framework File
 - T08 - Complete OWASP MASVS Framework File
 - T09 - Complete LGPD Framework File
@@ -67,6 +67,7 @@ None.
 - `templates/roadmap-template.md`
 - `templates/audit-plan-template.md`
 - `templates/session-manifest-template.md`
+- `frameworks/_framework-registry.md`
 
 ## Validation Results
 
@@ -89,6 +90,8 @@ None.
 - Templates align with Lead Auditor artifact expectations.
 - Templates reference canonical status, severity, evidence, and maturity models.
 - Audit plan and session manifest templates created to support session tracking.
+- T05 registry metadata updated with version and review date information.
+- All registered framework files exist in the frameworks directory.
 
 ## Remaining Known Inconsistencies
 
@@ -104,4 +107,4 @@ None.
 
 ## Next Step
 
-Refine registry metadata in `frameworks/_framework-registry.md`.
+Complete OWASP Top 10 framework file in `frameworks/`.
