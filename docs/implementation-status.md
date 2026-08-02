@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T04 - Define Artifact Templates
+T05 - Refine Registry Metadata
 
 Status: PENDING
 
@@ -16,10 +16,10 @@ Status: PENDING
 - T01 - Persistent Planning and Initial Status completed.
 - T02 - Define Shared Standards completed.
 - T03 - Define Methodologies completed.
+- T04 - Define Artifact Templates completed.
 
 ## Pending Tasks
 
-- T05 - Refine Registry Metadata
 - T06 - Complete OWASP Top 10 Framework File
 - T07 - Complete OWASP ASVS Framework File
 - T08 - Complete OWASP MASVS Framework File
@@ -59,6 +59,14 @@ None.
 - `methodologies/operations-methodology.md`
 - `methodologies/compliance-methodology.md`
 - `methodologies/observability-methodology.md`
+- `templates/discovery-template.md`
+- `templates/finding-template.md`
+- `templates/risk-register-template.md`
+- `templates/executive-report-template.md`
+- `templates/technical-report-template.md`
+- `templates/roadmap-template.md`
+- `templates/audit-plan-template.md`
+- `templates/session-manifest-template.md`
 
 ## Validation Results
 
@@ -77,13 +85,16 @@ None.
 - Methodologies provide process guidance without duplicating agent roles.
 - Methodologies reference canonical standards for status, severity, evidence,
   finding, and maturity models.
+- T04 template files created for all expected audit artifacts.
+- Templates align with Lead Auditor artifact expectations.
+- Templates reference canonical status, severity, evidence, and maturity models.
+- Audit plan and session manifest templates created to support session tracking.
 
 ## Remaining Known Inconsistencies
 
 - Lead Auditor does not yet list `observability` as a supported audit mode.
 - Lead Auditor maturity assessment does not yet include Observability.
-- `session-manifest.md` and `audit-plan.md` are expected artifacts but lack template structure.
-- Templates are empty.
+- `session-manifest.md` and `audit-plan.md` templates have been created.
 - Framework files other than the registry are empty.
 - Documentation files are empty.
 - README is minimal and has encoding artifacts.
@@ -93,4 +104,4 @@ None.
 
 ## Next Step
 
-Define artifact templates in `templates/`.
+Refine registry metadata in `frameworks/_framework-registry.md`.
