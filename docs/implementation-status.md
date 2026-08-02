@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T07 - Complete OWASP ASVS Framework File
+T08 - Complete OWASP MASVS Framework File
 
 Status: PENDING
 
@@ -19,10 +19,10 @@ Status: PENDING
 - T04 - Define Artifact Templates completed.
 - T05 - Refine Registry Metadata completed.
 - T06 - Complete OWASP Top 10 Framework File completed.
+- T07 - Complete OWASP ASVS Framework File completed.
 
 ## Pending Tasks
 
-- T08 - Complete OWASP MASVS Framework File
 - T09 - Complete LGPD Framework File
 - T10 - Complete NIST CSF Framework File
 - T11 - Complete CIS Controls Framework File
@@ -69,6 +69,7 @@ None.
 - `templates/session-manifest-template.md`
 - `frameworks/_framework-registry.md`
 - `frameworks/owasp-top10.md`
+- `frameworks/owasp-asvs.md`
 
 ## Validation Results
 
@@ -99,7 +100,7 @@ None.
 - Lead Auditor does not yet list `observability` as a supported audit mode.
 - Lead Auditor maturity assessment does not yet include Observability.
 - `session-manifest.md` and `audit-plan.md` templates have been created.
-- Framework files other than the registry and OWASP Top 10 are empty.
+- Framework files other than the registry, OWASP Top 10, and OWASP ASVS are empty.
 - Documentation files are empty.
 - README is minimal and has encoding artifacts.
 - Example directories are empty.
@@ -108,4 +109,4 @@ None.
 
 ## Next Step
 
-Complete OWASP ASVS framework file in `frameworks/`.
+Complete OWASP MASVS framework file in `frameworks/`.
