@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T10 - Complete NIST CSF Framework File
+T11 - Complete CIS Controls Framework File
 
 Status: PENDING
 
@@ -22,10 +22,10 @@ Status: PENDING
 - T07 - Complete OWASP ASVS Framework File completed.
 - T08 - Complete OWASP MASVS Framework File completed.
 - T09 - Complete LGPD Framework File completed.
+- T10 - Complete NIST CSF Framework File completed.
 
 ## Pending Tasks
 
-- T11 - Complete CIS Controls Framework File
 - T12 - Align Agent Definitions
 - T13 - Complete Architecture Documentation
 - T14 - Complete README
@@ -72,6 +72,7 @@ None.
 - `frameworks/owasp-asvs.md`
 - `frameworks/owasp-masvs.md`
 - `frameworks/lgpd.md`
+- `frameworks/nist-csf.md`
 
 ## Validation Results
 
@@ -102,7 +103,7 @@ None.
 - Lead Auditor does not yet list `observability` as a supported audit mode.
 - Lead Auditor maturity assessment does not yet include Observability.
 - `session-manifest.md` and `audit-plan.md` templates have been created.
-- Framework files other than the registry, OWASP Top 10, OWASP ASVS, OWASP MASVS, and LGPD are empty.
+- Framework files other than the registry, OWASP Top 10, OWASP ASVS, OWASP MASVS, LGPD, and NIST CSF are empty.
 - Documentation files are empty.
 - README is minimal and has encoding artifacts.
 - Example directories are empty.
@@ -111,4 +112,4 @@ None.
 
 ## Next Step
 
-Complete NIST CSF framework file in `frameworks/`.
+Complete CIS Controls framework file in `frameworks/`.
