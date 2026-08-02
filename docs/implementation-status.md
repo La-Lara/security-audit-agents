@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T15 - Add Minimal Examples
+T16 - Static End-to-End Validation
 
 Status: PENDING
 
@@ -27,10 +27,10 @@ Status: PENDING
 - T12 - Align Agent Definitions completed.
 - T13 - Complete Architecture Documentation completed.
 - T14 - Complete README completed.
+- T15 - Add Minimal Examples completed.
 
 ## Pending Tasks
 
-- T16 - Static End-to-End Validation
 - T17 - Final Status Update
 
 ## Blocked Tasks
@@ -79,6 +79,9 @@ None.
 - `docs/audit-flow.md`
 - `docs/framework-concepts.md`
 - `README.md`
+- `examples/mobile-app/profile.md`
+- `examples/web-api/profile.md`
+- `examples/desktop-app/profile.md`
 
 ## Validation Results
 
@@ -112,10 +115,10 @@ None.
 - Framework files are complete.
 - Documentation files are complete.
 - README is complete.
-- Example directories are empty.
+- Example directories contain profile examples.
 - Specialized agents still duplicate model definitions until T12 aligns them to
   canonical standards.
 
 ## Next Step
 
-Add minimal examples in `examples/`.
+Perform static end-to-end validation.
