@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T11 - Complete CIS Controls Framework File
+T12 - Align Agent Definitions
 
 Status: PENDING
 
@@ -23,10 +23,10 @@ Status: PENDING
 - T08 - Complete OWASP MASVS Framework File completed.
 - T09 - Complete LGPD Framework File completed.
 - T10 - Complete NIST CSF Framework File completed.
+- T11 - Complete CIS Controls Framework File completed.
 
 ## Pending Tasks
 
-- T12 - Align Agent Definitions
 - T13 - Complete Architecture Documentation
 - T14 - Complete README
 - T15 - Add Minimal Examples
@@ -73,6 +73,7 @@ None.
 - `frameworks/owasp-masvs.md`
 - `frameworks/lgpd.md`
 - `frameworks/nist-csf.md`
+- `frameworks/cis-controls.md`
 
 ## Validation Results
 
@@ -103,7 +104,7 @@ None.
 - Lead Auditor does not yet list `observability` as a supported audit mode.
 - Lead Auditor maturity assessment does not yet include Observability.
 - `session-manifest.md` and `audit-plan.md` templates have been created.
-- Framework files other than the registry, OWASP Top 10, OWASP ASVS, OWASP MASVS, LGPD, and NIST CSF are empty.
+- Framework files are complete.
 - Documentation files are empty.
 - README is minimal and has encoding artifacts.
 - Example directories are empty.
@@ -112,4 +113,4 @@ None.
 
 ## Next Step
 
-Complete CIS Controls framework file in `frameworks/`.
+Align agent definitions in `agents/`.
