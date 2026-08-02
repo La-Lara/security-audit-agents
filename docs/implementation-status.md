@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T14 - Complete README
+T15 - Add Minimal Examples
 
 Status: PENDING
 
@@ -26,10 +26,10 @@ Status: PENDING
 - T11 - Complete CIS Controls Framework File completed.
 - T12 - Align Agent Definitions completed.
 - T13 - Complete Architecture Documentation completed.
+- T14 - Complete README completed.
 
 ## Pending Tasks
 
-- T15 - Add Minimal Examples
 - T16 - Static End-to-End Validation
 - T17 - Final Status Update
 
@@ -78,6 +78,7 @@ None.
 - `docs/architecture.md`
 - `docs/audit-flow.md`
 - `docs/framework-concepts.md`
+- `README.md`
 
 ## Validation Results
 
@@ -110,11 +111,11 @@ None.
 - `session-manifest.md` and `audit-plan.md` templates have been created.
 - Framework files are complete.
 - Documentation files are complete.
-- README is minimal and has encoding artifacts.
+- README is complete.
 - Example directories are empty.
 - Specialized agents still duplicate model definitions until T12 aligns them to
   canonical standards.
 
 ## Next Step
 
-Complete README in repository root.
+Add minimal examples in `examples/`.
