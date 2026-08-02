@@ -2,7 +2,7 @@
 
 ## Current Task
 
-T12 - Align Agent Definitions
+T13 - Complete Architecture Documentation
 
 Status: PENDING
 
@@ -24,10 +24,10 @@ Status: PENDING
 - T09 - Complete LGPD Framework File completed.
 - T10 - Complete NIST CSF Framework File completed.
 - T11 - Complete CIS Controls Framework File completed.
+- T12 - Align Agent Definitions completed.
 
 ## Pending Tasks
 
-- T13 - Complete Architecture Documentation
 - T14 - Complete README
 - T15 - Add Minimal Examples
 - T16 - Static End-to-End Validation
@@ -74,6 +74,7 @@ None.
 - `frameworks/lgpd.md`
 - `frameworks/nist-csf.md`
 - `frameworks/cis-controls.md`
+- `agents/_lead-auditor.md`
 
 ## Validation Results
 
@@ -101,8 +102,8 @@ None.
 
 ## Remaining Known Inconsistencies
 
-- Lead Auditor does not yet list `observability` as a supported audit mode.
-- Lead Auditor maturity assessment does not yet include Observability.
+- Lead Auditor now supports `observability` audit mode.
+- Lead Auditor maturity assessment now includes Observability.
 - `session-manifest.md` and `audit-plan.md` templates have been created.
 - Framework files are complete.
 - Documentation files are empty.
@@ -113,4 +114,4 @@ None.
 
 ## Next Step
 
-Align agent definitions in `agents/`.
+Complete architecture documentation in `docs/`.

@@ -187,6 +187,7 @@ AUDIT_MODE=
 - monitoring
 - operations
 - compliance
+- observability
 - full
 
 Optional:
@@ -397,6 +398,10 @@ Execute Operations Auditor only.
 
 Execute Compliance Auditor only.
 
+## observability
+
+Execute Observability Auditor only.
+
 ## full
 
 Execute all applicable auditors.
@@ -466,6 +471,7 @@ Generate maturity levels for:
 - Monitoring
 - Operations
 - Compliance
+- Observability
 
 Allowed Levels:
 
