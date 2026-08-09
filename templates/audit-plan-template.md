@@ -31,6 +31,10 @@ List key technologies.
 
 Describe the selected audit mode.
 
+Use exactly one allowed mode: `discovery`, `security`, `monitoring`,
+`operations`, `compliance`, `observability`, or `full`. `full` requires
+explicit user selection.
+
 ### Audit Workspace
 
 Describe the audit workspace location.
@@ -39,15 +43,17 @@ Describe the audit workspace location.
 
 Define the audit scope.
 
+State included, excluded, partial, and unresolved scopes.
+
 ---
 
 ## Applicability Results
 
 Summarize applicability analysis results.
 
-| Domain | Applicability | Justification |
-|--------|---------------|---------------|
-| | | |
+| Domain | Applicability | Responsible Auditor | Execution Decision | Justification |
+|--------|---------------|---------------------|-------------------|---------------|
+| | | | | |
 
 ---
 
@@ -83,6 +89,9 @@ Summarize applicability analysis results.
 
 Define the execution sequence for auditors.
 
+No specialized auditor may run until this plan is complete and the required
+discovery, applicability, and framework assignment artifacts exist.
+
 ---
 
 ## Expected Artifacts
@@ -94,3 +103,22 @@ List expected output artifacts.
 ## Success Criteria
 
 Define audit completion criteria.
+
+Include artifact completeness, evidence coverage, valid vocabularies, and
+documented blockers or limitations.
+
+## Pre-Execution Gate
+
+Confirm each item before starting a specialized auditor:
+
+- [ ] `discovery.md` exists in the audit workspace;
+- [ ] `applicability.md` exists in the audit workspace;
+- [ ] a valid audit mode was explicitly selected;
+- [ ] `audit-plan.md` records the selected mode and scope;
+- [ ] selected framework assignments are recorded;
+- [ ] every execution decision is `APPLICABLE`, `PARTIALLY_APPLICABLE`,
+  `NOT_APPLICABLE`, or an explicitly documented `UNKNOWN` limitation;
+- [ ] unresolved `UNKNOWN` scopes will not be executed automatically.
+
+If any prerequisite is incomplete, do not start specialized execution. Record
+the blocker in `session-manifest.md`.

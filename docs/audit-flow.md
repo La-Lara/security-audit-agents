@@ -16,6 +16,9 @@ Only discovery and planning:
 3. Determine applicability;
 4. Present recommendations.
 
+If no mode is provided, stop after this phase and wait for explicit user
+selection. Do not infer `full`.
+
 ### Domain Modes
 
 Execute specific auditor:
@@ -28,13 +31,14 @@ Execute specific auditor:
 
 ### Full Mode
 
-Execute all applicable auditors:
+Execute all auditors required by the applicability and assignment matrix:
 
 1. Run discovery;
 2. Determine applicability;
 3. Select frameworks;
-4. Execute applicable auditors;
-5. Consolidate results.
+4. Generate `audit-plan.md`;
+5. Execute applicable auditors;
+6. Consolidate results.
 
 ## Phase Details
 
@@ -78,9 +82,14 @@ Process:
 2. Recommend audit mode;
 3. Wait for user selection;
 4. Select applicable frameworks;
-5. Record framework assignments.
+5. Record framework assignments;
+6. Generate `audit-plan.md`.
 
 Output: audit-plan.md.
+
+Before execution, confirm the pre-execution gate in the audit plan. If a
+prerequisite is missing, update `session-manifest.md`, record the blocker, and
+stop.
 
 ---
 
@@ -94,6 +103,11 @@ Process:
 2. Provide artifacts to auditor;
 3. Execute auditor independently;
 4. Collect auditor output.
+
+Prerequisites: `discovery.md`, `applicability.md`, `audit-plan.md`, selected
+mode, and selected framework assignments. `UNKNOWN` scopes are not executed
+automatically. `PARTIALLY_APPLICABLE` scopes are executed only within their
+applicable boundaries.
 
 Output: domain-specific audit files.
 
@@ -144,4 +158,7 @@ Before consolidation:
 - All findings have evidence;
 - All statuses are valid;
 - All severities are justified;
-- No assumptions classified as facts.
+- No assumptions classified as facts;
+- Findings, recommendations, future improvements, and validation suggestions
+  are separate;
+- Maturity is reported only for selected and executed domains.

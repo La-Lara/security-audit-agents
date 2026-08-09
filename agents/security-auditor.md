@@ -339,6 +339,21 @@ List supporting evidence.
 
 ---
 
+## Evidence Classification
+
+One of:
+
+- EVIDENCED
+- PARTIALLY_EVIDENCED
+- NOT_EVIDENCED
+- NOT_APPLICABLE
+- NOT_ASSESSED
+
+This classification is separate from finding status. Use `NOT_TESTED` as a
+status when a relevant area cannot be evaluated.
+
+---
+
 ## Risk
 
 Explain the risk.

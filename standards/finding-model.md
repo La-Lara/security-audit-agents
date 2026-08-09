@@ -79,8 +79,8 @@ Do not create a finding for:
 
 When a concern is plausible but incomplete, use `POTENTIAL` status and explain
 what validation is needed. When the area is relevant but not evaluable, record
-it outside confirmed findings with `NOT_TESTED`, `NOT_EVIDENCED`, or
-`NOT_ASSESSED` as appropriate.
+it outside confirmed findings with `NOT_TESTED` status and the appropriate
+evidence classification, such as `NOT_EVIDENCED` or `NOT_ASSESSED`.
 
 ## Consolidation Rules
 

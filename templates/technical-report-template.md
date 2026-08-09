@@ -39,9 +39,17 @@ List frameworks and references used.
 
 Document audit limitations.
 
+Include missing evidence, unresolved `UNKNOWN` scope, skipped auditors, and
+artifacts that were not generated.
+
 ---
 
 ## Domain Analysis
+
+Include only domains selected and executed in the audit plan. For every domain
+not selected, `NOT_APPLICABLE`, or unresolved `UNKNOWN`, omit the domain
+assessment or record it under `Domains Not Assessed` with a rationale. Do not
+assign maturity levels outside the executed audit scope.
 
 ### Security
 
@@ -51,7 +59,7 @@ List security findings.
 
 #### Maturity Assessment
 
-Assess security maturity.
+Assess security maturity only when Security was selected and executed.
 
 #### Recommendations
 
@@ -67,7 +75,7 @@ List monitoring findings.
 
 #### Maturity Assessment
 
-Assess monitoring maturity.
+Assess monitoring maturity only when Monitoring was selected and executed.
 
 #### Recommendations
 
@@ -83,7 +91,7 @@ List operations findings.
 
 #### Maturity Assessment
 
-Assess operations maturity.
+Assess operations maturity only when Operations was selected and executed.
 
 #### Recommendations
 
@@ -99,7 +107,7 @@ List compliance findings.
 
 #### Maturity Assessment
 
-Assess compliance maturity.
+Assess compliance maturity only when Compliance was selected and executed.
 
 #### Recommendations
 
@@ -115,7 +123,8 @@ List observability findings.
 
 #### Maturity Assessment
 
-Assess observability maturity.
+Assess observability maturity only when Observability was selected and
+executed.
 
 #### Recommendations
 
@@ -127,11 +136,29 @@ List observability recommendations.
 
 Summarize evidence sources and quality.
 
+Keep evidence classifications separate from finding statuses. Use
+`NOT_EVIDENCED` and `NOT_ASSESSED` only as evidence classifications.
+
+## Domains Not Assessed
+
+List domains excluded because they were not selected, not applicable, or
+unresolved. Include the reason and any evidence limitation.
+
+## Assessment Records
+
+Record relevant non-finding assessments, including `NOT_TESTED`,
+`NOT_APPLICABLE`, `NOT_EVIDENCED`, and `NOT_ASSESSED` rationale.
+
 ---
 
 ## Technical Recommendations
 
 List prioritized technical recommendations.
+
+## Future Improvements
+
+List optional improvements without finding identifiers when no current
+evidence-supported issue exists.
 
 ---
 

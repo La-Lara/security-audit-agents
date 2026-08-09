@@ -42,8 +42,10 @@ For each applicable domain, collect repository evidence:
 - runbooks;
 - architecture documents.
 
-If evidence cannot be identified, record `NOT_EVIDENCED` or `NOT_TESTED` and
-move to the next domain. Do not create findings without evidence.
+If evidence cannot be identified, record a non-finding assessment with
+`NOT_TESTED` status and `NOT_EVIDENCED` evidence classification, or use
+`NOT_ASSESSED` when the area could not be assessed. Do not create findings
+without evidence.
 
 ### Phase 3 - Framework Consultation
 

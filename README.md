@@ -53,7 +53,9 @@ with any LLM and provides evidence-based audit capabilities.
 TARGET_REPOSITORY=<path>
 ```
 
-Only discovery and planning.
+Discovery and applicability analysis are performed, recommendations are
+presented, and the process stops for explicit mode selection. Repository-only
+input MUST NOT start a full audit.
 
 ### Domain Modes
 
@@ -72,6 +74,12 @@ AUDIT_MODE=full
 ```
 
 Execute all applicable auditors.
+
+`full` must be explicitly supplied or selected. It means all auditors required
+by the applicability matrix, not every auditor and not every framework.
+
+Audit mode controls execution scope; it is not a report type. Report artifacts
+are generated according to the templates after their phase gates are complete.
 
 ## Audit Modes
 

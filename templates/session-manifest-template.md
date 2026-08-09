@@ -29,6 +29,9 @@ Path to the audit workspace.
 
 Describe the current audit phase.
 
+Allowed phases are: Input Normalization, Discovery, Applicability, Planning,
+Execution, Consolidation, and Complete.
+
 ### Completed Phases
 
 List completed phases.
@@ -43,6 +46,7 @@ List pending phases.
 
 | Artifact | Path | Status |
 |----------|------|--------|
+| session-manifest.md | | IN_PROGRESS |
 | discovery.md | | |
 | applicability.md | | |
 | audit-plan.md | | |
@@ -74,8 +78,20 @@ List pending phases.
 
 Document any issues or blockers encountered during the audit.
 
+Allowed artifact statuses:
+
+- NOT_STARTED;
+- IN_PROGRESS;
+- COMPLETED;
+- BLOCKED;
+- NOT_APPLICABLE.
+
 ---
 
 ## Session Notes
 
 Document relevant session notes.
+
+Update this manifest at session start and after each completed phase. Record the
+normalized repository path, selected or missing audit mode, next user decision,
+and any skipped or unresolved scope.

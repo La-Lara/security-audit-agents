@@ -170,6 +170,11 @@ Do NOT modify .gitignore automatically.
 
 Only recommend changes.
 
+Create or update `session-manifest.md` at session start and after each
+completed phase. Record the normalized repository path, current phase,
+selected or missing mode, generated artifacts, next user decision, and skipped
+or unresolved scope.
+
 ---
 
 # Input
@@ -194,9 +199,28 @@ Optional:
 
 AUDIT_WORKSPACE=<folder>
 
-If omitted:
+Only `TARGET_REPOSITORY` is required to begin discovery.
 
-Use discovery mode.
+Normalize natural-language input into the fields above. If the repository path
+is not supplied in key-value form but is unambiguous, show the normalized
+interpretation before continuing.
+
+If `AUDIT_MODE` is absent, empty, invalid, or ambiguous:
+
+1. Run discovery and applicability analysis only.
+2. Generate or update `discovery.md`, `applicability.md`, and
+   `session-manifest.md`.
+3. Recommend one or more audit modes with evidence-based reasoning.
+4. Present the available modes.
+5. Stop and request explicit user selection.
+
+Never infer `full` from a generic request such as "run an audit", "audit this
+repository", or "generate a report". Execute `full` only when the user
+explicitly supplies `AUDIT_MODE=full` or explicitly selects full after the
+recommendation.
+
+Audit mode controls execution scope; it is not a report type. Report artifact
+names are fixed by the templates.
 
 ---
 
@@ -307,11 +331,18 @@ Generate:
 
 AUDIT_WORKSPACE/applicability.md
 
+Before any specialized auditor runs, `discovery.md`, `applicability.md`,
+`audit-plan.md`, the selected mode, and selected framework assignments MUST
+exist in the audit workspace.
+
 ---
 
 # Phase 3 - Audit Planning
 
-If AUDIT_MODE was not provided:
+If `AUDIT_MODE` was not explicitly selected, stop after discovery and
+applicability and request user selection as described in the Input section.
+
+After a valid mode is selected:
 
 Present:
 
@@ -332,9 +363,9 @@ Present:
 - compliance
 - full
 
-Wait for user selection.
-
-Do not continue until a mode is selected.
+Generate `audit-plan.md` using the audit plan template. Do not execute a
+specialized auditor until the plan records the selected mode, scope,
+framework assignments, and execution order.
 
 ---
 
@@ -404,11 +435,42 @@ Execute Observability Auditor only.
 
 ## full
 
-Execute all applicable auditors.
+Execute all auditors required by the applicability and assignment matrix.
+This does not mean every auditor or every framework.
 
-Skip auditors classified as NOT_APPLICABLE.
+Execute `APPLICABLE` scopes. Execute `PARTIALLY_APPLICABLE` scopes only for
+the applicable domains or components. Skip `NOT_APPLICABLE` scopes and record
+the rationale. Do not execute unresolved `UNKNOWN` scopes automatically;
+request clarification or record them as `NOT_TESTED`.
 
 Explain every skipped auditor.
+
+## Applicability Ownership
+
+Use the following default domain ownership matrix when assigning specialized
+auditors. Narrow the scope when the applicability result is partial.
+
+| Domain | Responsible Auditor |
+|---|---|
+| Application Security | Security Auditor |
+| Secure Coding | Security Auditor |
+| Mobile Security | Security Auditor |
+| API Security | Security Auditor |
+| Infrastructure Security | Operations Auditor |
+| Cloud Security | Operations Auditor |
+| Logging | Observability Auditor |
+| Monitoring | Monitoring Auditor |
+| Observability | Observability Auditor |
+| Alerting | Monitoring Auditor |
+| Incident Response | Operations Auditor |
+| Operational Resilience | Operations Auditor |
+| Backup & Recovery | Operations Auditor |
+| Privacy | Compliance Auditor |
+| LGPD | Compliance Auditor |
+| Supply Chain Security | Security Auditor |
+| CI/CD Security | Operations Auditor |
+
+Record the owner and execution decision in `audit-plan.md`.
 
 ---
 
@@ -461,17 +523,16 @@ Generate:
 
 inside the audit workspace.
 
+Do not present consolidated reports as complete when required domain artifacts
+are missing. List missing artifacts as blockers or limitations.
+
 ---
 
 # Maturity Assessment
 
-Generate maturity levels for:
-
-- Security
-- Monitoring
-- Operations
-- Compliance
-- Observability
+Generate maturity levels only for domains that are selected, executed, and
+within the audit scope. Exclude non-selected, `NOT_APPLICABLE`, and unresolved
+`UNKNOWN` domains, or report them as not assessed with a rationale.
 
 Allowed Levels:
 
@@ -517,7 +578,7 @@ Only determine whether Compliance Auditor should be recommended and which regist
 
 # Final Output
 
-Always begin with:
+Begin every response with:
 
 ## Project Type
 
@@ -529,7 +590,13 @@ Always begin with:
 
 ## Recommended Audit Mode
 
-Then continue according to the selected phase.
+## Execution State
+
+State the normalized repository path, selected or missing mode, current phase,
+artifacts generated, next user decision, and skipped or unresolved scope.
+
+Then continue according to the selected phase. If the mode is absent, invalid,
+or ambiguous, stop after presenting the recommendation and available modes.
 
 ---
 

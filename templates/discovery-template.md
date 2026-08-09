@@ -166,25 +166,25 @@ Do not create findings here. This is observation-level only.
 
 ## Audit Applicability Matrix
 
-| Domain | Applicability | Evidence |
-|--------|---------------|----------|
-| Application Security | | |
-| Secure Coding | | |
-| Mobile Security | | |
-| API Security | | |
-| Infrastructure Security | | |
-| Cloud Security | | |
-| Logging | | |
-| Monitoring | | |
-| Observability | | |
-| Alerting | | |
-| Incident Response | | |
-| Operational Resilience | | |
-| Backup & Recovery | | |
-| Privacy | | |
-| LGPD | | |
-| Supply Chain Security | | |
-| CI/CD Security | | |
+| Domain | Applicability | Responsible Auditor | Evidence | Execution Decision |
+|--------|---------------|---------------------|----------|-------------------|
+| Application Security | | Security Auditor | | |
+| Secure Coding | | Security Auditor | | |
+| Mobile Security | | Security Auditor | | |
+| API Security | | Security Auditor | | |
+| Infrastructure Security | | Operations Auditor | | |
+| Cloud Security | | Operations Auditor | | |
+| Logging | | Observability Auditor | | |
+| Monitoring | | Monitoring Auditor | | |
+| Observability | | Observability Auditor | | |
+| Alerting | | Monitoring Auditor | | |
+| Incident Response | | Operations Auditor | | |
+| Operational Resilience | | Operations Auditor | | |
+| Backup & Recovery | | Operations Auditor | | |
+| Privacy | | Compliance Auditor | | |
+| LGPD | | Compliance Auditor | | |
+| Supply Chain Security | | Security Auditor | | |
+| CI/CD Security | | Operations Auditor | | |
 
 Allowed applicability values:
 
@@ -192,3 +192,10 @@ Allowed applicability values:
 - PARTIALLY_APPLICABLE;
 - NOT_APPLICABLE;
 - UNKNOWN.
+
+Execution decisions MUST follow these rules:
+
+- APPLICABLE: execute the assigned auditor for the scope;
+- PARTIALLY_APPLICABLE: execute only the applicable domains or components;
+- NOT_APPLICABLE: skip and record the rationale;
+- UNKNOWN: pause for clarification or record `NOT_TESTED`; do not infer scope.

@@ -47,7 +47,10 @@ One of:
 - EVIDENCED;
 - PARTIALLY_EVIDENCED;
 - NOT_EVIDENCED;
-- NOT_APPLICABLE.
+- NOT_APPLICABLE;
+- NOT_ASSESSED.
+
+This is an evidence classification, not a finding status.
 
 ---
 

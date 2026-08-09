@@ -38,7 +38,8 @@ List assessed domains.
 
 ### Domains Not Assessed
 
-List domains not assessed with justification.
+List domains not assessed with justification, including non-selected,
+`NOT_APPLICABLE`, and unresolved `UNKNOWN` domains.
 
 ---
 
@@ -71,11 +72,20 @@ Highlight the most significant risks identified.
 | Compliance | |
 | Observability | |
 
+Include only domains that were selected and executed. Do not assign a maturity
+level to a domain outside the audit scope.
+
 ---
 
 ## Top Recommendations
 
 List the most important recommended actions.
+
+Keep recommendations separate from findings and future improvements.
+
+## Future Improvements
+
+List optional improvements that are not current evidence-supported findings.
 
 ---
 

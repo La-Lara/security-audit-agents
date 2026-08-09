@@ -6,7 +6,8 @@
 
 ## Validation Summary
 
-Static end-to-end validation completed successfully.
+Static end-to-end validation completed successfully for the baseline framework
+and ambiguity-remediation rules.
 
 ## File Path Validation
 
@@ -17,7 +18,7 @@ All expected files exist:
 - methodologies/: 5 files
 - templates/: 8 files
 - frameworks/: 7 files
-- docs/: 6 files
+- docs/: 9 files
 - examples/: 3 profiles
 
 ## Reference Validation
@@ -87,6 +88,40 @@ Audit modes are consistent in Lead Auditor:
 - compliance ✓
 - observability ✓
 - full ✓
+
+Missing and ambiguous mode behavior:
+
+- repository path only: discovery and applicability, then stop ✓
+- invalid or ambiguous mode: explain and request selection ✓
+- `full` requires explicit user selection ✓
+- audit mode is distinct from report artifact type ✓
+
+## Applicability and Phase-Gate Validation
+
+- `APPLICABLE` executes the assigned auditor ✓
+- `PARTIALLY_APPLICABLE` executes only the applicable scope ✓
+- `NOT_APPLICABLE` is skipped with rationale ✓
+- `UNKNOWN` is not executed automatically ✓
+- domain-to-auditor ownership is explicit ✓
+- `audit-plan.md` is required before specialized execution ✓
+- `session-manifest.md` is updated at session start and phase boundaries ✓
+
+## Vocabulary Validation
+
+- finding statuses and evidence classifications are separate ✓
+- `NOT_EVIDENCED` and `NOT_ASSESSED` are not finding statuses ✓
+- future improvements remain outside findings without evidence ✓
+- maturity is limited to selected and executed domains ✓
+
+## Regression Case Coverage
+
+The provider-independent regression matrix is documented in
+`docs/ambiguity-regression-cases.md`.
+
+- Static contract coverage: complete ✓
+- Live LLM execution: not run in this validation environment
+- Live results MUST NOT be marked as passed without an actual model response
+  and artifact review.
 
 ## Framework Selection Validation
 

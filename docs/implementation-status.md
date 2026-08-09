@@ -30,6 +30,12 @@ Status: COMPLETED
 - T15 - Add Minimal Examples completed.
 - T16 - Static End-to-End Validation completed.
 - T17 - Final Status Update completed.
+- Ambiguity remediation specification and implementation plan completed.
+- Ambiguity remediation rules implemented across the Lead Auditor, templates,
+  methodologies, standards, documentation, and validation report.
+- Specialized agent evidence vocabularies aligned with canonical standards.
+- Technical report maturity scope and session-manifest gates completed.
+- Provider-independent ambiguity regression cases documented.
 
 ## Pending Tasks
 
@@ -116,6 +122,14 @@ None.
 - T15 example profiles added for mobile, web API, and desktop applications.
 - T16 static validation completed successfully.
 - All file paths, references, terms, and modes are consistent.
+- Repository-only input is defined as discovery/planning until explicit mode
+  selection.
+- Finding status and evidence classification vocabularies are separated.
+- Applicability execution behavior and domain ownership are explicit.
+- Phase gates require discovery, applicability, planning, and framework
+  assignments before specialized execution.
+- Live LLM regression execution remains not run in this environment; static
+  contract validation is complete.
 
 ## Remaining Known Inconsistencies
 

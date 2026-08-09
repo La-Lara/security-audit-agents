@@ -43,8 +43,10 @@ For each applicable domain, collect repository evidence:
 - documentation;
 - privacy-related documentation.
 
-If evidence cannot be identified, record `NOT_EVIDENCED` or `NOT_TESTED` and
-move to the next domain. Do not create findings without evidence.
+If evidence cannot be identified, record a non-finding assessment with
+`NOT_TESTED` status and `NOT_EVIDENCED` evidence classification, or use
+`NOT_ASSESSED` when the area could not be assessed. Do not create findings
+without evidence.
 
 ### Phase 3 - Framework Consultation
 
@@ -67,8 +69,10 @@ repository-backed justification.
 
 ### Phase 6 - Future Improvements
 
-Document optional improvements not supported by current evidence as findings.
-Keep this section separate from confirmed and potential findings.
+Document optional improvements not supported by current evidence in the Future
+Improvements section. Do not assign finding identifiers, status, severity, or
+finding fields unless an evidence-supported issue exists. Keep this section
+separate from confirmed and potential findings.
 
 ## Evidence Handling
 

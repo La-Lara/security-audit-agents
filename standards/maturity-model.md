@@ -88,6 +88,10 @@ Specialized auditors may assess domain-specific capabilities within those
 domains, including authentication, alerting, recovery, privacy controls,
 logging, metrics, tracing, documentation, or other applicable areas.
 
+Do not assign a maturity level to a domain that was not selected and executed.
+For `NOT_APPLICABLE` or unresolved `UNKNOWN` domains, exclude the rating or
+record the domain as not assessed with a rationale.
+
 ## Validation Rules
 
 - Confirm every maturity level is one of the allowed levels.
